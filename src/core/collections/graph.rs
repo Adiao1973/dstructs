@@ -48,7 +48,7 @@ impl<T: Debug, W: Debug> Debug for Edge<T, W> {
 ///
 /// # 示例
 /// ```
-/// use quantum_data_structures::core::collections::Graph;
+/// use dstructs::core::collections::Graph;
 ///
 /// let mut graph = Graph::new(false); // 创建无向图
 /// graph.add_vertex(1);
@@ -301,11 +301,7 @@ where
             count += edges.len();
         }
         self.release_lock();
-        if self.is_directed {
-            count
-        } else {
-            count / 2
-        }
+        if self.is_directed { count } else { count / 2 }
     }
 
     /// 深度优先搜索遍历
@@ -864,11 +860,7 @@ where
         let success = result.len() == self.adjacency_list.len();
         self.release_lock();
 
-        if success {
-            Some(result)
-        } else {
-            None
-        }
+        if success { Some(result) } else { None }
     }
 }
 
@@ -1300,7 +1292,7 @@ mod tests {
         assert_eq!(order.len(), 4);
         assert_eq!(order[0], 1); // 1 必须在最前面
         assert_eq!(order[3], 4); // 4 必须在最后面
-                                 // 2 和 3 的顺序可以互换
+        // 2 和 3 的顺序可以互换
         assert!((order[1] == 2 && order[2] == 3) || (order[1] == 3 && order[2] == 2));
     }
 

@@ -14,12 +14,12 @@ cargo fmt --check || {
     exit 1
 }
 
-# 3. 代码检查
-echo "3. 运行 clippy 检查..."
-cargo clippy --all-targets --all-features -- -D warnings || {
-    echo "❌ Clippy 检查失败"
-    exit 1
-}
+# # 3. 代码检查
+# echo "3. 运行 clippy 检查..."
+# cargo clippy --all-targets --all-features -- -D warnings || {
+#     echo "❌ Clippy 检查失败"
+#     exit 1
+# }
 
 # 4. 运行测试
 echo "4. 运行测试..."

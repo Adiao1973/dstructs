@@ -16,7 +16,7 @@ use std::ops::RangeBounds;
 /// # 示例
 ///
 /// ```
-/// use quantum_data_structures::core::collections::Stack;
+/// use dstructs::core::collections::Stack;
 ///
 /// let mut stack = Stack::new();
 /// stack.push(1);
@@ -140,7 +140,7 @@ impl<T> Stack<T> {
     /// # 示例
     ///
     /// ```
-    /// use quantum_data_structures::core::collections::Stack;
+    /// use dstructs::core::collections::Stack;
     ///
     /// let mut stack = Stack::new();
     /// stack.push(1);
@@ -165,7 +165,7 @@ impl<T> Stack<T> {
     /// # 示例
     ///
     /// ```
-    /// use quantum_data_structures::core::collections::Stack;
+    /// use dstructs::core::collections::Stack;
     ///
     /// let mut stack = Stack::new();
     /// stack.push(1);
@@ -211,7 +211,7 @@ impl<T> Stack<T> {
     /// # 示例
     ///
     /// ```
-    /// use quantum_data_structures::core::collections::Stack;
+    /// use dstructs::core::collections::Stack;
     ///
     /// let mut stack = Stack::new();
     /// stack.extend(0..5); // 添加 [0, 1, 2, 3, 4]
@@ -321,7 +321,7 @@ impl<T> FromIterator<T> for Stack<T> {
     /// # 示例
     ///
     /// ```
-    /// use quantum_data_structures::core::collections::Stack;
+    /// use dstructs::core::collections::Stack;
     ///
     /// let vec = vec![1, 2, 3];
     /// let mut stack: Stack<_> = vec.into_iter().collect();
@@ -345,7 +345,7 @@ impl<T> Extend<T> for Stack<T> {
     /// # 示例
     ///
     /// ```
-    /// use quantum_data_structures::core::collections::Stack;
+    /// use dstructs::core::collections::Stack;
     ///
     /// let mut stack = Stack::new();
     /// stack.push(1);
@@ -369,7 +369,7 @@ impl<T> From<Vec<T>> for Stack<T> {
     /// # 示例
     ///
     /// ```
-    /// use quantum_data_structures::core::collections::Stack;
+    /// use dstructs::core::collections::Stack;
     ///
     /// let vec = vec![1, 2, 3];
     /// let mut stack = Stack::from(vec);
